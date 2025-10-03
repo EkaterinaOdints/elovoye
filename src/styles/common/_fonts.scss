@@ -1,0 +1,17 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Playfair Display";
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Bold.woff") format("woff");
+  font-display: swap;
+}

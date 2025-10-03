@@ -1,0 +1,20 @@
+@use "../common/variables" as *;
+
+.button {
+  display: inline-block;
+  max-width: 276px;
+  padding: 8px 16px;
+  background-color: $color-primary-dark;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
+  color: $color-default-white;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $color-primary-darker;
+  }
+}

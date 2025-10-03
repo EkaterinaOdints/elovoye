@@ -4,12 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <title>My project</title>
+    <title>Глэмпинг Elovoye</title>
   </head>
 
   <body>
-    <header class="header">123</header>
+    <header class="header is-blured" data-js-header>
+      <div class="header__container">
+        <div class="header__wrapper">
+          <div class="logo">
+            <img src="./img/logo.svg" width="147" height="40" alt="Логотип Elovoye" />
+          </div>
+          <nav class="header__navigation" data-js-navigation>
+            <button class="header__navigation-button" type="button" data-js-navigation-button>
+              <div class="header__navigation-button-item" aria-hidden="true"></div>
+            </button>
+            <ul class="header__navigation-list navigation-list">
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#">Галерея</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#">В домах</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#">Чем заняться</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__social">
+            <ul class="header__social-list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                  <span class="visually-hidden">Instagram</span>
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                  <span class="visually-hidden">Twitter</span>
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <div class="hero__text">
+            <h1 class="hero__title title">Отдых от&nbsp;города в&nbsp;сердце хвойного леса</h1>
+            <a class="button" href="#">Забронировать</a>
+          </div>
+        </div>
+      </section>
       <h1>Hello World!</h1>
       <img src="./img/placeholder@1x.png" alt="123" />
       <svg width="17" height="16">
