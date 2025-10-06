@@ -32,7 +32,11 @@ body {
   font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
   color: $color-primary-darker;
   font-style: normal;
-  height: 2000px;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .visually-hidden {

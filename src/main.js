@@ -1,4 +1,7 @@
 import "./styles/styles.scss";
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
 
 const blurHeader = () => {
   const header = document.body.querySelector("[data-js-header]");
@@ -51,5 +54,29 @@ const useMobileMenu = () => {
   });
 };
 
+const initGallerySlider = () => {
+  const swiper = new Swiper("[data-js-swiper]", {
+    direction: "horizontal",
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+      nextEl: "[data-js-swiper-button-next]",
+      prevEl: "[data-js-swiper-button-prev]",
+    },
+    width: null,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        width: 727,
+        spaceBetween: 30,
+      },
+      1025: {
+        width: 796,
+      },
+    },
+  });
+};
+
 blurHeader();
 useMobileMenu();
+initGallerySlider();

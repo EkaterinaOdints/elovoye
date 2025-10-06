@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.89.2",
+    "swiper": "^12.0.2",
     "vite": "^7.0.5",
     "vite-plugin-image-optimizer": "^2.0.2"
   },
