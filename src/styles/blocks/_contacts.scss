@@ -1,26 +1,31 @@
 @use "../common/variables" as *;
 
 .contacts {
-  position: relative;
-  background-color: $color-primary-darker;
-  color: $color-default-white;
-  overflow: hidden;
-  padding: 48px 0 85px;
+  display: flex;
+  flex-direction: column;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    min-width: 1402px;
-    height: calc(100% + 440px);
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-image: url("../../img/contacts/contacts-bg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  &__info {
+    position: relative;
+    background-color: $color-primary-darker;
+    color: $color-default-white;
+    overflow: hidden;
+    padding: 48px 0 85px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      min-width: 1402px;
+      height: calc(100% + 440px);
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background-image: url("../../img/contacts/contacts-bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   &__wrapper {
@@ -46,10 +51,12 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 30px 0;
+    &__info {
+      padding: 30px 0;
 
-    &::before {
-      content: none;
+      &::before {
+        content: none;
+      }
     }
 
     &__list {

@@ -1,0 +1,20 @@
+.map {
+  &__wrapper {
+    width: 100%;
+    height: 420px;
+    background-image: url("../../img/map/map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    &__wrapper {
+      height: 310px;
+    }
+  }
+}
