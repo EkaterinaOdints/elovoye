@@ -1,0 +1,122 @@
+@use "../common/variables" as *;
+
+.activities {
+  position: relative;
+  padding: 75px 0 150px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    width: 717px;
+    height: 370px;
+    transform: translateX(-340px);
+    display: block;
+    background-image: url("../../img/activities/activities-bg-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -155px;
+    top: 0;
+    width: 450px;
+    height: 410px;
+    display: block;
+    background-image: url("../../img/activities/activities-bg-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0 0 33px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 1439px) {
+    &::before {
+      left: auto;
+      right: 50%;
+    }
+
+    &::after {
+      right: auto;
+      left: 50%;
+      transform: translateX(424px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 0 30px;
+
+    &__title {
+      margin: 0 0 20px;
+    }
+
+    &__list {
+      gap: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 0 20px;
+    background-color: $color-primary-transparent;
+    color: $color-primary-dark;
+
+    &__title {
+      margin: 0 0 25px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &__list {
+      gap: 10px 0;
+      padding: 10px;
+      background-color: $color-default-white;
+      border-radius: 30px;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 475px) {
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    &__list {
+      padding: 20px;
+    }
+  }
+}
