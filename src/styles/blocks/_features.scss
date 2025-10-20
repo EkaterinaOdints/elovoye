@@ -44,6 +44,10 @@
   @media (max-width: 767px) {
     padding: 20px 0 30px;
 
+    &__title {
+      text-align: start;
+    }
+
     &__item {
       width: 100%;
     }
