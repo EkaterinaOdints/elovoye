@@ -8,6 +8,7 @@
   background-color: $color-default-white;
   padding: 0 0 40px;
   overflow: hidden;
+  scroll-margin-top: 84px;
 
   &::before {
     content: "";

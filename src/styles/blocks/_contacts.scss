@@ -3,6 +3,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 84px;
 
   &__info {
     position: relative;

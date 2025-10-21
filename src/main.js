@@ -77,6 +77,13 @@ const initGallerySlider = () => {
   });
 };
 
+const renderActualCopyrightDate = () => {
+  const dateWrapper = document.body.querySelector("[data-js-copyright-date]");
+  const date = new Date().getFullYear();
+  dateWrapper.textContent = date;
+};
+
 blurHeader();
 useMobileMenu();
 initGallerySlider();
+renderActualCopyrightDate();

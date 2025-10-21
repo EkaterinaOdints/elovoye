@@ -20,16 +20,16 @@
             </button>
             <ul class="header__navigation-list navigation-list">
               <li class="navigation-list__item">
-                <a class="navigation-list__link" href="#">Галерея</a>
+                <a class="navigation-list__link" href="#gallery">Галерея</a>
               </li>
               <li class="navigation-list__item">
-                <a class="navigation-list__link" href="#">В домах</a>
+                <a class="navigation-list__link" href="#features">В домах</a>
               </li>
               <li class="navigation-list__item">
-                <a class="navigation-list__link" href="#">Чем заняться</a>
+                <a class="navigation-list__link" href="#activities">Чем заняться</a>
               </li>
               <li class="navigation-list__item">
-                <a class="navigation-list__link" href="#">Контакты</a>
+                <a class="navigation-list__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -37,26 +37,32 @@
             <ul class="header__social-list social-list">
               <li class="social-list__item">
                 <a class="social-list__link" href="#">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg width="24" height="24">
-                    <use href="./img/sprite.svg#facebook"></use>
-                  </svg>
+                  <span class="visually-hidden">Vkontakte</span>
+                  <div class="social-list__link-icon">
+                    <svg width="24" height="24">
+                      <use href="./img/sprite.svg#vk"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                  <span class="visually-hidden">Whatsapp</span>
+                  <div class="social-list__link-icon">
+                    <svg width="24" height="24">
+                      <use href="./img/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </div>
                 </a>
               </li>
               <li class="social-list__item">
                 <a class="social-list__link" href="#">
                   <span class="visually-hidden">Instagram</span>
-                  <svg width="24" height="24">
-                    <use href="./img/sprite.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="#">
-                  <span class="visually-hidden">Twitter</span>
-                  <svg width="24" height="24">
-                    <use href="./img/sprite.svg#twitter"></use>
-                  </svg>
+                  <div class="social-list__link-icon">
+                    <svg width="24" height="24">
+                      <use href="./img/sprite.svg#instagram"></use>
+                    </svg>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -65,7 +71,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container">
           <div class="hero__wrapper">
             <div class="hero__text">
@@ -75,7 +81,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container">
           <div class="gallery__wrapper">
             <div class="gallery__text">
@@ -315,7 +321,7 @@
           </div>
         </div>
       </section>
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <div class="features__wrapper">
             <h2 class="features__title title">В&nbsp;нашем домике есть все, чтобы сделать ваш отдых идеальным</h2>
@@ -396,7 +402,7 @@
           </div>
         </div>
       </section>
-      <section class="activities">
+      <section class="activities" id="activities">
         <div class="container">
           <div class="activities__wrapper">
             <h2 class="activities__title title">Чем у&nbsp;нас можно заняться</h2>
@@ -471,7 +477,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__info">
           <div class="container">
             <div class="contacts__wrapper">
@@ -499,7 +505,60 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo-wrapper">
+            <div class="logo">
+              <img src="./img/logo.svg" width="147" height="40" alt="Логотип Elovoye" />
+            </div>
+            <p class="footer__logo-text">Отдых в сердце леса</p>
+          </div>
+          <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <div class="social-list__link-icon">
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </div>
+                <span class="social-list__link-text">Vkontakte</span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <div class="social-list__link-icon">
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </div>
+                <span class="social-list__link-text">Whatsapp</span>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <div class="social-list__link-icon">
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#instagram"></use>
+                  </svg>
+                </div>
+                <span class="social-list__link-text">Instagram</span>
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">
+            ©
+            <span class="footer__copyright-date" data-js-copyright-date>2025</span>
+            «Elovoye»
+          </p>
+          <div class="footer__bank-details">
+            <span class="footer__bank-details-item">ИП Плотников Петр</span>
+            <span class="footer__bank-details-item">ИНН 772031827165</span>
+            <span class="footer__bank-details-item">p/счет 40802810601500050162</span>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
