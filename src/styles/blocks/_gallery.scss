@@ -23,6 +23,12 @@
       url("../../img/gallery/gallery-bg-right.svg");
     background-repeat: no-repeat;
     background-position: left -5px center, right -5px center;
+    z-index: 1;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
   }
 
   &__text {
