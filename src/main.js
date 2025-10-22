@@ -22,36 +22,38 @@ const blurHeader = () => {
 
 const useMobileMenu = () => {
   const header = document.body.querySelector("[data-js-header]");
-  const navigation = header.querySelector("[data-js-navigation]");
-  const button = navigation.querySelector("[data-js-navigation-button]");
+  const navigation = header?.querySelector("[data-js-navigation]");
+  const button = navigation?.querySelector("[data-js-navigation-button]");
 
   let isMenuOpened = false;
 
-  const openMenu = () => {
-    header.classList.add("is-menu-opened");
-    navigation.classList.add("is-menu-opened");
-    isMenuOpened = true;
-  };
+  if (button && navigation) {
+    const openMenu = () => {
+      header.classList.add("is-menu-opened");
+      navigation.classList.add("is-menu-opened");
+      isMenuOpened = true;
+    };
 
-  const closeMenu = () => {
-    header.classList.remove("is-menu-opened");
-    navigation.classList.remove("is-menu-opened");
-    isMenuOpened = false;
-  };
+    const closeMenu = () => {
+      header.classList.remove("is-menu-opened");
+      navigation.classList.remove("is-menu-opened");
+      isMenuOpened = false;
+    };
 
-  button?.addEventListener("click", () => {
-    if (isMenuOpened) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
+    button.addEventListener("click", () => {
+      if (isMenuOpened) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
 
-  window.addEventListener("resize", () => {
-    if (isMenuOpened) {
-      closeMenu();
-    }
-  });
+    window.addEventListener("resize", () => {
+      if (isMenuOpened) {
+        closeMenu();
+      }
+    });
+  }
 };
 
 const initGallerySlider = () => {
@@ -79,8 +81,10 @@ const initGallerySlider = () => {
 
 const renderActualCopyrightDate = () => {
   const dateWrapper = document.body.querySelector("[data-js-copyright-date]");
-  const date = new Date().getFullYear();
-  dateWrapper.textContent = date;
+  if (dateWrapper) {
+    const date = new Date().getFullYear();
+    dateWrapper.textContent = date;
+  }
 };
 
 blurHeader();
